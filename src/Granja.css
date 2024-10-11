@@ -1,0 +1,60 @@
+/* MiGranja.css */
+.container-granja {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.title-granja {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.card-granja {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-granja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-granja {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.text-granja {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    font-weight: 500;
+}
+
+.arrow-icon {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-left: auto;
+}
