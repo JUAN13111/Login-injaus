@@ -44,7 +44,7 @@ function App() {
     }
 
     try {
-      const url = `http://localhost:8081/user/registrarUsuario?email=${encodeURIComponent(emailRegistro)}&password=${encodeURIComponent(passRegistro)}&telefono=${encodeURIComponent(telefono)}&confirmacion=${encodeURIComponent(confirmacion)}`;
+      const url = `http://localhost:8080/user/registrarUsuario?email=${encodeURIComponent(emailRegistro)}&password=${encodeURIComponent(passRegistro)}&telefono=${encodeURIComponent(telefono)}&confirmacion=${encodeURIComponent(confirmacion)}`;
       const response = await fetch(url, { method: 'GET' });
 
       if (!response.ok) {
@@ -73,8 +73,7 @@ function App() {
     }
     try {
       // Realizar una solicitud GET sin parámetros
-      //CAMBIAR ENDPOINT POR EL NUEVO(TE LA PASA TU PAPA IVAN)
-      const url = `http://localhost:8081/user/registrarUsuario?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+      const url = `http://localhost:8080/user/login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
       const response = await fetch(url, {
         method: 'GET'
       });
@@ -85,7 +84,7 @@ function App() {
 
       const data = await response.json();
       console.log('Respuesta de la API:', data);
-      if (data.codeHtpp == 200) {
+      if (data.codeHtpp === 200) {
           navigate('/menu');
     } else {
       displayError(data.msg);
