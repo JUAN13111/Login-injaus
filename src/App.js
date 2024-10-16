@@ -50,11 +50,9 @@ function App() {
       if (!response.ok) {
         throw new Error('Error en la solicitud de registro.');
       }
-
       const data = await response.text();
       console.log('Respuesta de la API:', data);
       displayError(data);
-
     } catch (err) {
       displayError(err.message);
     } finally {
@@ -62,6 +60,7 @@ function App() {
     }
   };
 
+  //NUEVO BOTON LOGIN0
   const Loguearse = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -72,10 +71,13 @@ function App() {
       setLoading(false);
       return;
     }
-
     try {
-      const url = `http://localhost:8081/user/login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
-      const response = await fetch(url, { method: 'GET' });
+      // Realizar una solicitud GET sin parámetros
+      //CAMBIAR ENDPOINT POR EL NUEVO(TE LA PASA TU PAPA IVAN)
+      const url = `http://localhost:8081/user/registrarUsuario?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+      const response = await fetch(url, {
+        method: 'GET'
+      });
 
       if (!response.ok) {
         throw new Error('Error en la solicitud de login.');
